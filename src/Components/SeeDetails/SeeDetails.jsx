@@ -9,7 +9,6 @@ const SeeDetails = () => {
             <div className="detailsCard">
                 <div className="details">
                 <h1 className="detailsHeading">User Details</h1>
-                {/* <p>-------------------------------------</p> */}
 
                 <h2 className="text-2xl">Name: {details.name}</h2>
                 <h4 className="text-[18px]">User Name: {details.username}</h4>
