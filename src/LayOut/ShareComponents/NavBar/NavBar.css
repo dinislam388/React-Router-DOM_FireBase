@@ -1,0 +1,57 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2D2D2D;
+    padding: 12px;
+    /* If NavBar is Show All time */
+    /* position: sticky; 
+    top: 0;
+    right: 0;
+    left: 0; 
+    and Add App.jsx ParenDiv CLassName="main" and CSS file: Positin: relative
+    */
+}
+
+.logo {
+    background-color: #F8F0CD;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 65px;
+}
+
+.navBar ul {
+    display: flex;
+    gap: 30px;
+    font-size:18px;
+  }
+  
+  .navBar a {
+    color: #fff;
+    transition: all .3s ease;
+    /* width: 4rem; */
+    text-decoration: none;
+  }
+
+  .navBar a:hover {
+    /* letter-spacing: 0.2px; */
+    color: #FF7801;
+  }
+
+ ul .active {
+    color: #FF7801;
+  }
