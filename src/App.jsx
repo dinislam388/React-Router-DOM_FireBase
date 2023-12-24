@@ -1,16 +1,16 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
 import './App.css'
 import NavBar from './LayOut/ShareComponents/NavBar/NavBar'
 import Footer from './LayOut/ShareComponents/Footer/Footer'
-// import Home from './Components/Home/Home'
+import Loading from './Components/Loading/Loading'
 
 function App() {
-
+    const navigation = useNavigation()
   return (
     <>
       <div>
           <NavBar />
-            <Outlet/>
+          <div> {navigation.state === "loading" ? <Loading /> : <Outlet/> }</div>
           <Footer/>
       </div>
     </>
