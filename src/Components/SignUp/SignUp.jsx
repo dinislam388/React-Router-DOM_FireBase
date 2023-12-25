@@ -22,7 +22,7 @@ const SignUp = () => {
     if (password !== ConfomPass) {
       return toast.error("Password do no tmatch")
     }
-    password !==ConfomPass || toast.error("Please fill up the form")
+    // password !==ConfomPass || toast.error("Please fill up the form")
     // password !==ConfomPass && toast.error("Passwords do not match. please try again")
 
     // Sign up and FireBase access email and password
@@ -30,16 +30,22 @@ const SignUp = () => {
     
 
   };
+
   if (user) {
     navigate("/")
     return toast.success("Sign up success fully!", {toastId: "customId"}); 
+
+  }
+
+  if (user ) {
+    
   }
   return (
     <div>
-      <section class="rounded-md bg-black/80 p-2">
-        <div class="flex items-center justify-center bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-          <div class="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
-            <div class="mb-2">
+      <section className="rounded-md bg-black/80 p-2">
+        <div className="flex items-center justify-center bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
+          <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
+            <div className="mb-2">
               <svg
                 width="50"
                 height="56"
@@ -53,25 +59,25 @@ const SignUp = () => {
                 ></path>
               </svg>
             </div>
-            <h2 class="text-2xl font-bold leading-tight text-black">
+            <h2 className="text-2xl font-bold leading-tight text-black">
               Sign up to create account
             </h2>
-            {/* <p class="mt-2 text-base text-gray-600"> */}
+            {/* <p className="mt-2 text-base text-gray-600"> */}
             Already have an account?{" "}
             <Link className="text-green-600" to="/login">
               <button>Sign in</button>
             </Link>
             {/* </p> */}
-            <form onSubmit={handleSignUp} method="POST" class="mt-8">
-              <div class="space-y-5">
+            <form onSubmit={handleSignUp} method="POST" className="mt-8">
+              <div className="space-y-5">
                 <div>
-                  <label for="name" class="text-base font-medium text-gray-900">
+                  <label for="name" className="text-base font-medium text-gray-900">
                     {" "}
                     Full Name{" "}
                   </label>
-                  <div class="mt-2">
+                  <div className="mt-2">
                     <input
-                      class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="text"
                       name="name"
                       placeholder="Full Name"
@@ -82,14 +88,14 @@ const SignUp = () => {
                 <div>
                   <label
                     for="email"
-                    class="text-base font-medium text-gray-900"
+                    className="text-base font-medium text-gray-900"
                   >
                     {" "}
                     Email address{" "}
                   </label>
-                  <div class="mt-2">
+                  <div className="mt-2">
                     <input
-                      class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       name="email"
                       placeholder="Email"
@@ -98,18 +104,18 @@ const SignUp = () => {
                   </div>
                 </div>
                 <div>
-                  <div class="flex items-center justify-between">
+                  <div className="flex items-center justify-between">
                     <label
                       for="password"
-                      class="text-base font-medium text-gray-900"
+                      className="text-base font-medium text-gray-900"
                     >
                       {" "}
                       Password{" "}
                     </label>
                   </div>
-                  <div class="mt-2">
+                  <div className="mt-2">
                     <input
-                      class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       name="password "
                       placeholder="Password"
@@ -118,18 +124,18 @@ const SignUp = () => {
                   </div>
                 </div>
                 <div>
-                  <div class="flex items-center justify-between">
+                  <div className="flex items-center justify-between">
                     <label
                      
-                      class="text-base font-medium text-gray-900"
+                      className="text-base font-medium text-gray-900"
                     >
                       {" "}
                       Conform Password{" "}
                     </label>
                   </div>
-                  <div class="mt-2">
+                  <div className="mt-2">
                     <input
-                      class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       name="cpassword "
                       placeholder="Conform Password"
@@ -143,7 +149,7 @@ const SignUp = () => {
                 <div>
                   <button
                     type="button"
-                    class="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
+                    className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                   >
                     Create Account{" "}
                     <svg
@@ -156,7 +162,7 @@ const SignUp = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="ml-2"
+                      className="ml-2"
                     >
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
@@ -165,14 +171,14 @@ const SignUp = () => {
                 </div>
               </div>
             </form>
-            <div class="mt-3 space-y-3">
+            <div className="mt-3 space-y-3">
               <button
                 type="button"
-                class="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
+                className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
               >
-                <span class="mr-2 inline-block">
+                <span className="mr-2 inline-block">
                   <svg
-                    class="h-6 w-6 text-rose-500"
+                    className="h-6 w-6 text-rose-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -184,11 +190,11 @@ const SignUp = () => {
               </button>
               <button
                 type="button"
-                class="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
+                className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
               >
-                <span class="mr-2 inline-block">
+                <span className="mr-2 inline-block">
                   <svg
-                    class="h-6 w-6 text-[#2563EB]"
+                    className="h-6 w-6 text-[#2563EB]"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
