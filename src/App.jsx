@@ -3,6 +3,8 @@ import './App.css'
 import NavBar from './LayOut/ShareComponents/NavBar/NavBar'
 import Footer from './LayOut/ShareComponents/Footer/Footer'
 import Loading from './Components/Loading/Loading'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
 
 function App() {
     const navigation = useNavigation()
@@ -11,6 +13,7 @@ function App() {
       <div>
           <NavBar />
           <div> {navigation.state === "loading" ? <Loading /> : <Outlet/> }</div>
+          <ToastContainer/>
           <Footer/>
       </div>
     </>
